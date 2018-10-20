@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label styleClass="ViewStyle" layoutX="10" layoutY="30"
+               text="You played in a maze you loved so much?&#10;Do you want to re-enable it later?&#10;In order to use the option of saving this maze,&#10;you must first create a maze.
+&#10;Then, when you see a maze you like - click Save.&#10;
+Now you can create and play more mazes.&#10;
+And whenever you want,&#10; you can go back to the maze you loved.&#10;">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </Label>
+
+
+    </children>
+</AnchorPane>
+
+

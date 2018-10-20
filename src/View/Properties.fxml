@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+    <children>
+        <Label prefHeight="27.0" prefWidth="220.0" text="Choose your Properties" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+
+        <GridPane prefWidth="175.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="69.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="57.0" />
+                <ColumnConstraints maxWidth="65.0" minWidth="0.0" prefWidth="53.0" />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints />
+            </rowConstraints>
+
+            <ChoiceBox fx:id="chbx_generateAlgorithm" disable="false" prefHeight="39.0" prefWidth="203.0" value="Choose" GridPane.columnSpan="4" GridPane.rowIndex="3">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="My Simple Generator" />
+                        <String fx:value="My Maze Generator" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="chbx_solvingAlgorithm" disable="false" prefHeight="30.0" prefWidth="182.0" value="Choose" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="BFS" />
+                        <String fx:value="DFS" />
+                        <String fx:value="BestFS" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Label text=" solveAlgorithm" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+            <Label text=" GenerateAlgorithm" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <Button fx:id="btn_SetProp" onAction="#SetPROP"  prefHeight="39.0" prefWidth="197.0" text="Set properties" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+
+        </GridPane>
+        <!--<CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="166.0" text="CheckBox" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
+    </children>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="94.0" minWidth="10.0" prefWidth="63.0" />
+        <ColumnConstraints maxWidth="158.0" minWidth="10.0" prefWidth="126.0" />
+        <ColumnConstraints maxWidth="271.0" minWidth="153.0" prefWidth="182.0" />
+        <ColumnConstraints maxWidth="271.0" minWidth="181.0" prefWidth="231.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="29.0" />
+        <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="41.0" />
+        <RowConstraints maxHeight="365.0" minHeight="305.0" prefHeight="305.0" />
+    </rowConstraints>
+
+</GridPane>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.MazeDisplayer?>
+<?import View.SolutionDisplayer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainBoarderPane" onKeyPressed="#KeyPressed" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+    <left>
+        <VBox prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane prefWidth="175.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints />
+                    </rowConstraints>
+                    <Label text="Maze rows:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Label text="Maze columns:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtfld_rowsNum" disable="false" text="20" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <TextField fx:id="txtfld_columnsNum" disable="false" text="20" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                 <!--   <ChoiceBox fx:id="chbx_generateAlgorithm" disable="false" prefHeight="25.0" prefWidth="167.0" value="Choose" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="My Simple Generator" />
+                                <String fx:value="My Maze Generator" />
+                            </FXCollections>
+                        </items>
+                    </ChoiceBox>-->
+                    <Button fx:id="btn_generateMaze" onAction="#generateMaze" prefHeight="25.0" prefWidth="167.0" text="Generate Maze" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                   <!-- <ChoiceBox fx:id="chbx_solvingAlgorithm" disable="false" prefHeight="25.0" prefWidth="167.0" value="Choose" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="4">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="BFS" />
+                                <String fx:value="DFS" />
+                                <String fx:value="BestFS" />
+                            </FXCollections>
+                        </items>
+                    </ChoiceBox>-->
+                    <Button fx:id="btn_solveMaze" disable="true" onAction="#solveMaze" prefHeight="25.0" prefWidth="167.0" text="Solve Maze" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                    <Label text="Char row:" GridPane.columnIndex="0" GridPane.rowIndex="19" />
+                    <Label text="Char column:" GridPane.columnIndex="0" GridPane.rowIndex="20" />
+                    <Label fx:id="lbl_rowsNum" text="${controller.characterPositionRow}" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+                    <Label fx:id="lbl_columnsNum" text="${controller.characterPositionColumn}" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+               <Button fx:id="btn_StopMusic" disable="true" onAction="#Mute" text="Mute" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+
+                </GridPane>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </left>
+    <bottom>
+        <HBox BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="25.0" prefWidth="786.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="596.0" minWidth="10.0" prefWidth="596.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="190.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </children></HBox>
+    </bottom>
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#New" text="New" />
+                                <MenuItem mnemonicParsing="false" onAction="#Save" text="Save" />
+                                <MenuItem fx:id="menuItem_load" disable="true" mnemonicParsing="false" onAction="#Load" text="Load" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Options">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#Properties" text="Properties" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Exit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#Exit" text="Bye Bye..." />
+                            </items>
+
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#HelpInstructions" text="How to Get Started" />
+                                <MenuItem mnemonicParsing="false" onAction="#HelpSaveAndLoad" text="Save or Load " />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="About">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#AboutDev" text="About Developers" />
+                                <MenuItem mnemonicParsing="false" onAction="#AboutMaze" text="About The maze" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <Pane fx:id="mazePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="582.0" BorderPane.alignment="CENTER">
+            <children>
+            <!--<SplitPane dividerPositions="0.5" layoutX="220.0" layoutY="181.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">-->
+              <!--<items>-->
+                <!--<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />-->
+                <!--<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />-->
+              <!--</items>-->
+            <!--</SplitPane>-->
+                <MazeDisplayer fx:id="mazeDisplayer" height="526.0" imageFileNameCharacter="resources/Images/character_mice.jpg" imageFileNameGoal="resources/Images/goal_cheese.jpg" imageFileNameWall="resources/Images/wall_grain.jpg" imageFileNameHome="resources/Images/hom_mice.jpg" width="600.0"  />
+                <SolutionDisplayer fx:id="solutionDisplayer" height="547.0" solutionPathImage="resources/Images/path_redPoint.jpg" width="585.0" />
+            <!--<ComboBox fx:id="character_comboBox" layoutX="225.0" layoutY="217.0" prefWidth="150.0" />-->
+            <!--<ComboBox fx:id="goal_comboBox" layoutX="225.0" layoutY="321.0" prefWidth="150.0" />-->
+            <!--<ComboBox layoutX="225.0" layoutY="220.0" prefWidth="150.0" contextMenu="Choose character" />-->
+            <!--<ComboBox layoutX="225.0" layoutY="313.0" prefWidth="150.0" contextMenu="Choose your goal"/>-->
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </Pane>
+    </center>
+</BorderPane>

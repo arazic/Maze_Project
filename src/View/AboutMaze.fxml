@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label styleClass="ViewStyle" layoutX="10" layoutY="30"  text="Algorithms to generate maze: &#10;My maze generator using prime algorithm, &#10; Simple maze algorithm using random method
+        &#10;&#10; Solve Algorithms: &#10; Breadth-first search, Depth-first search, &#10;Best-first search&#10;">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>
+
+
